@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TS FFT Spectrogram Visualizer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="controls">
+    <button id="micBtn">Start Microphone</button>
+    <button id="sysBtn">Capture System/Tab Audio</button>
+    <button id="stopBtn" disabled>Stop</button>
+    <label>
+      Visual
+      <select id="visualMode">
+        <option value="spectrogram" selected>Spectrogram</option>
+        <option value="bars">Bars</option>
+      </select>
+    </label>
+    <label>
+      FFT size
+      <select id="fftSize">
+        <option>2048</option>
+        <option selected>4096</option>
+        <option>8192</option>
+        <option>16384</option>
+      </select>
+    </label>
+    <label>
+      Smoothing
+      <input id="smoothing" type="range" min="0" max="0.95" step="0.01" value="0.7" />
+    </label>
+    <label>
+      Min dB
+      <input id="minDb" type="number" value="-100" />
+    </label>
+    <label>
+      Max dB
+      <input id="maxDb" type="number" value="-30" />
+    </label>
+  </div>
+
+  <div id="status" role="status" aria-live="polite" style="margin-top:8px;color:#aaa"></div>
+
+  <div class="canvases">
+    <canvas id="spectrogram" width="1200" height="512"></canvas>
+    <canvas id="scale" width="80" height="512" title="Frequency scale"></canvas>
+  </div>
+
+  <script type="module" src="./Visualizer.ts"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+:root { color-scheme: dark; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #0b0b0f; color: #e6e6e6; }
+.controls { display: flex; gap: 12px; align-items: center; padding: 12px; border-bottom: 1px solid #222; flex-wrap: wrap; }
+.controls label { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; }
+.canvases { display: flex; gap: 12px; padding: 12px; }
+#spectrogram { background: #000; image-rendering: pixelated; border: 1px solid #222; }
+#scale { background: #111; border: 1px solid #222; }
+button { padding: 6px 10px; }
