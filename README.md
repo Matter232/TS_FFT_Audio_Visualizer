@@ -1,10 +1,10 @@
-# JS FFT Spectrum Visualizer
+# TS FFT Spectrum Visualizer
 
 Real-time audio visualization tool that captures live desktop or microphone audio and transforms it into visual spectrograms and frequency bars using FFT analysis.
 
 ## Tech Stack
 
-- **TypeScript** - Type-safe JavaScript
+- **TypeScript** - Typescript
 - **Vite** - Fast build tool and dev server
 - **Web Audio API** - AudioContext, AnalyserNode for FFT processing
 - **Canvas API** - Real-time rendering of visualizations
@@ -31,4 +31,4 @@ Each visualization mode is implemented as a separate, reusable function, making 
 npx vite
 ```
 
-Then open the application in your browser and select either microphone or system audio capture.
+Then open the application in your browser and select either microphone or system audio capture.  For system audio capture, ensure to toggle enable audio when selecting the tab or window you would like to capture from.
